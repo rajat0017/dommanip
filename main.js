@@ -5,6 +5,21 @@ addstorage.addEventListener('submit', addtostorage );
 
 
 function addtostorage(e){
-    localStorage.setItem( names.value,emails.value);
+  
+    
+    
+    let myobj={
+        name : names.value,
+        email : emails.value
+    };
+    
+    var objstr= JSON.stringify(myobj);
+    
+    localStorage.setItem('obj', objstr);
+    
+    var newobj =JSON.parse(newlocalStorage.getItem(obj));
+    
+   
+    
 }
 
