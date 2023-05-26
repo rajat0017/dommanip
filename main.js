@@ -1,25 +1,19 @@
-var addstorage= document.getElementById('my-form');
-var names= document.getElementById('name');
+var addstorage = document.getElementById('my-form');
+var names = document.getElementById('name');
 var emails = document.getElementById('email');
-addstorage.addEventListener('submit', addtostorage );
+addstorage.addEventListener('submit', addtostorage);
 
 
-function addtostorage(e){
-  
+function addtostorage(e) {
     
-    
-    let myobj={
-        name : names.value,
-        email : emails.value
+    let myobj = {
+        name: names.value,
+        email: emails.value
     };
     
-    var objstr= JSON.stringify(myobj);
-    
-    localStorage.setItem('obj', objstr);
-    
-    var newobj =JSON.parse(newlocalStorage.getItem(obj));
-    
-   
+    var objstr = JSON.stringify(myobj);
+    localStorage.setItem(names.value, objstr);
+    var newobj = JSON.parse(newlocalStorage.getItem(obj));
+    localStorage.setItem('obj',null);
     
 }
-
