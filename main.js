@@ -55,9 +55,17 @@ function addtostorage(e) {
         email: emails.value
     };
 
-    var objstr = JSON.stringify(myobj);
-    localStorage.setItem(names.value, objstr);
-    var newobj = JSON.parse(localStorage.getItem(names.value));
+    axios.post("https://crudcrud.com/api/e2406637d23c41319fcd969d14b2e6de/appointmentData",myobj)
+    .then((response)=> {
+        console.log(response);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+
+    // var objstr = JSON.stringify(myobj);
+    // localStorage.setItem(names.value, objstr);
+    // var newobj = JSON.parse(localStorage.getItem(names.value));
    
 
 }
